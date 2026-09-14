@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — ZAEEM APPAREL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { 'display': ['Bodoni Moda', 'serif'], 'serif': ['DM Serif Display', 'serif'], 'body': ['DM Sans', 'sans-serif'] },
+  colors: { 'gold': '#b8925a', 'gold-dark': '#8b6f3d', 'ivory': '#faf8f4', 'charcoal': '#0a0a0a', 'warm-gray': '#6b6560' }
+}}}
+</script>
+</head>
+<body class="bg-ivory text-charcoal">
+
+<header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-xl border-b border-charcoal/10 w-full">
+  <nav class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between gap-4">
+    <button id="mobileMenuBtn" class="lg:hidden p-2 -ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="/" class="text-center lg:text-left"><p class="font-display text-xl sm:text-2xl font-bold tracking-[0.5em] leading-none">ZAEEM</p><p class="text-[9px] tracking-[0.6em] text-gold mt-1.5">APPAREL</p></a>
+    <ul class="hidden lg:flex gap-12 xl:gap-16 text-[10px] tracking-[0.5em]">
+      <li><a href="/" class="link-underline hover:text-gold">HOME</a></li>
+      <li><a href="/shop.html" class="link-underline hover:text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="link-underline hover:text-gold">ABOUT</a></li>
+      <li><a href="/contact.html" class="link-underline text-gold">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center gap-1 sm:gap-3">
+      <button id="cartBtn" class="p-2 hover:text-gold relative"><svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg><span id="cartCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span></button>
+      <div class="relative">
+        <button id="dotsBtn" class="dots-btn p-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></button>
+        <div id="dotsMenu" class="dots-menu absolute top-full right-0 mt-2 w-[280px] bg-ivory border border-charcoal/10 z-50">
+          <div class="p-2">
+            <a href="/shop.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">🛍️ <span>Shop All</span></a>
+            <a href="/about.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📖 <span>About</span></a>
+            <a href="/size-guide.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📏 <span>Size Guide</span></a>
+            <a href="/payment.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">💳 <span>Payment</span></a>
+            <a href="/faq.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">❓ <span>FAQs</span></a>
+            <a href="https://wa.me/923193773788" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-green-50 text-sm text-green-700">💬 <span>WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="bg-ivory border-b border-charcoal/10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 text-center">
+    <p class="text-gold text-[10px] tracking-[0.5em] mb-4">GET IN TOUCH</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">Contact Us</h1>
+    <p class="font-serif italic text-xl text-warm-gray max-w-2xl mx-auto">We'd love to hear from you.</p>
+  </div>
+</section>
+
+<section class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 w-full">
+  <div class="grid lg:grid-cols-2 gap-16">
+
+    <!-- CONTACT INFO -->
+    <div>
+      <h2 class="font-display text-4xl font-bold mb-8">Reach Out Directly</h2>
+
+      <div class="space-y-8">
+        <a href="https://wa.me/923193773788" target="_blank" class="flex items-start gap-5 group">
+          <div class="w-12 h-12 border border-charcoal/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold group-hover:border-gold transition">
+            <span class="text-xl">💬</span>
+          </div>
+          <div>
+            <p class="font-display text-lg font-bold mb-1">WhatsApp</p>
+            <p class="text-warm-gray">0319 3773788</p>
+          </div>
+        </a>
+
+        <a href="mailto:Zaeemapparel77@gmail.com" class="flex items-start gap-5 group">
+          <div class="w-12 h-12 border border-charcoal/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold group-hover:border-gold transition">
+            <span class="text-xl">📧</span>
+          </div>
+          <div>
+            <p class="font-display text-lg font-bold mb-1">Email</p>
+            <p class="text-warm-gray break-all">Zaeemapparel77@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="tel:+923193773788" class="flex items-start gap-5 group">
+          <div class="w-12 h-12 border border-charcoal/20 flex items-center justify-center flex-shrink-0 group-hover:bg-gold group-hover:border-gold transition">
+            <span class="text-xl">📱</span>
+          </div>
+          <div>
+            <p class="font-display text-lg font-bold mb-1">Phone</p>
+            <p class="text-warm-gray">+92 319 3773788</p>
+            <p class="text-warm-gray">+92 347 7907556</p>
+          </div>
+        </a>
+
+        <div class="flex items-start gap-5">
+          <div class="w-12 h-12 border border-charcoal/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-xl">📍</span>
+          </div>
+          <div>
+            <p class="font-display text-lg font-bold mb-1">Location</p>
+            <p class="text-warm-gray">Pakistan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-charcoal/10">
+        <p class="text-gold text-[10px] tracking-[0.5em] mb-4">HOURS</p>
+        <p class="text-warm-gray mb-2">Monday - Saturday: 10am - 8pm</p>
+        <p class="text-warm-gray">Sunday: 12pm - 6pm</p>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div>
+      <h2 class="font-display text-4xl font-bold mb-8">Send a Message</h2>
+
+      <form id="contactForm" class="space-y-6">
+        <div>
+          <label class="block text-[10px] tracking-[0.4em] text-gold mb-3">YOUR NAME</label>
+          <input type="text" id="cname" required class="w-full bg-transparent border-b border-charcoal/30 py-3 focus:outline-none focus:border-gold transition" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] tracking-[0.4em] text-gold mb-3">EMAIL</label>
+          <input type="email" id="cemail" required class="w-full bg-transparent border-b border-charcoal/30 py-3 focus:outline-none focus:border-gold transition" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] tracking-[0.4em] text-gold mb-3">PHONE (OPTIONAL)</label>
+          <input type="tel" id="cphone" class="w-full bg-transparent border-b border-charcoal/30 py-3 focus:outline-none focus:border-gold transition" />
+        </div>
+
+        <div>
+          <label class="block text-[10px] tracking-[0.4em] text-gold mb-3">MESSAGE</label>
+          <textarea id="cmessage" rows="5" required class="w-full bg-transparent border-b border-charcoal/30 py-3 focus:outline-none focus:border-gold transition resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="btn-magnetic w-full bg-charcoal text-ivory py-5 text-[10px] tracking-[0.5em]">
+          <span>SEND MESSAGE</span>
+        </button>
+
+        <p id="contactMsg" class="text-center text-sm"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-ivory pt-16 pb-8 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 border-t border-ivory/10 text-center">
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">© 2026 ZAEEM APPAREL</p>
+  </div>
+</footer>
+
+<script>
+var dotsBtn = document.getElementById('dotsBtn'); var dotsMenu = document.getElementById('dotsMenu');
+dotsBtn.addEventListener('click', function(e) { e.stopPropagation(); dotsMenu.classList.toggle('open'); });
+document.addEventListener('click', function(e) { if (!dotsMenu.contains(e.target) && !dotsBtn.contains(e.target)) dotsMenu.classList.remove('open'); });
+document.getElementById('mobileMenuBtn').addEventListener('click', function() { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name = document.getElementById('cname').value;
+  var email = document.getElementById('cemail').value;
+  var phone = document.getElementById('cphone').value;
+  var message = document.getElementById('cmessage').value;
+
+  var msg = 'Hello Zaeem Apparel,%0A%0AName: ' + encodeURIComponent(name) + '%0AEmail: ' + encodeURIComponent(email);
+  if (phone) msg += '%0APhone: ' + encodeURIComponent(phone);
+  msg += '%0A%0AMessage: ' + encodeURIComponent(message);
+
+  window.open('https://wa.me/923193773788?text=' + msg, '_blank');
+
+  var m = document.getElementById('contactMsg');
+  m.textContent = '✓ Opening WhatsApp...';
+  m.className = 'text-center text-sm text-green-600 mt-4';
+  this.reset();
+});
+</script>
+</body>
+</html>

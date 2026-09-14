@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — ZAEEM APPAREL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { 'display': ['Bodoni Moda', 'serif'], 'serif': ['DM Serif Display', 'serif'], 'body': ['DM Sans', 'sans-serif'] },
+    colors: { 'gold': '#b8925a', 'gold-dark': '#8b6f3d', 'gold-light': '#e5c98e', 'ivory': '#faf8f4', 'charcoal': '#0a0a0a', 'warm-gray': '#6b6560' }
+  }}
+}
+</script>
+</head>
+<body class="bg-ivory text-charcoal">
+
+<!-- HEADER (same) -->
+<header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-xl border-b border-charcoal/10 w-full">
+  <nav class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between gap-4">
+    <button id="mobileMenuBtn" class="lg:hidden p-2 -ml-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a href="/" class="flex-shrink-0 text-center lg:text-left">
+      <p class="font-display text-xl sm:text-2xl lg:text-[26px] font-bold tracking-[0.5em] leading-none">ZAEEM</p>
+      <p class="text-[8px] sm:text-[9px] tracking-[0.6em] text-gold mt-1.5">APPAREL</p>
+    </a>
+    <ul class="hidden lg:flex gap-12 xl:gap-16 text-[10px] font-medium tracking-[0.5em]">
+      <li><a href="/" class="link-underline hover:text-gold transition">HOME</a></li>
+      <li><a href="/shop.html" class="link-underline hover:text-gold transition">SHOP</a></li>
+      <li><a href="/about.html" class="link-underline text-gold">ABOUT</a></li>
+      <li><a href="/contact.html" class="link-underline hover:text-gold transition">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center gap-1 sm:gap-3">
+      <button id="searchToggle" class="p-2 hover:text-gold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </button>
+      <button id="cartBtn" class="p-2 hover:text-gold transition relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span id="cartCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </button>
+      <div class="relative">
+        <button id="dotsBtn" class="dots-btn p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
+        </button>
+        <div id="dotsMenu" class="dots-menu absolute top-full right-0 mt-2 w-[280px] bg-ivory border border-charcoal/10 z-50">
+          <div class="p-2">
+            <a href="/shop.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">🛍️ <span>Shop All</span></a>
+            <a href="/about.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📖 <span>About</span></a>
+            <a href="/size-guide.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📏 <span>Size Guide</span></a>
+            <a href="/payment.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">💳 <span>Payment</span></a>
+            <a href="/faq.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">❓ <span>FAQs</span></a>
+            <a href="/contact.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📞 <span>Contact</span></a>
+            <a href="https://wa.me/923193773788" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-green-50 text-sm text-green-700">💬 <span>WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-charcoal/10 bg-ivory w-full">
+    <ul class="flex flex-col p-6 gap-1 text-[11px] tracking-[0.5em]">
+      <li><a href="/" class="block py-4 border-b border-charcoal/10 hover:text-gold">HOME</a></li>
+      <li><a href="/shop.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="block py-4 border-b border-charcoal/10 text-gold">ABOUT</a></li>
+      <li><a href="/contact.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">CONTACT</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="bg-ivory border-b border-charcoal/10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 text-center">
+    <p class="text-gold text-[10px] tracking-[0.5em] mb-4">OUR STORY</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">About Zaeem</h1>
+    <p class="font-serif italic text-xl text-warm-gray max-w-2xl mx-auto">Born from a vision. Crafted with obsession. Made for you.</p>
+  </div>
+</section>
+
+<!-- HERO IMAGE -->
+<section class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 w-full">
+  <div class="aspect-[21/9] w-full overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=90" alt="Zaeem Store" class="w-full h-full object-cover" />
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 w-full">
+  <div class="grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4">
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-4">CHAPTER 01</p>
+      <h2 class="font-display text-4xl lg:text-5xl font-bold leading-tight">The Beginning</h2>
+    </div>
+    <div class="lg:col-span-8">
+      <p class="font-serif text-2xl lg:text-3xl italic text-charcoal mb-8 leading-relaxed">
+        "We started with a simple question: why should premium quality be a luxury reserved for the few?"
+      </p>
+      <p class="text-warm-gray leading-relaxed mb-6 text-base lg:text-lg">
+        Zaeem Apparel was born in 2026 with a mission to redefine what contemporary Pakistani fashion could be. Frustrated by the gap between mass-produced fast fashion and prohibitively expensive luxury brands, we set out to create something different.
+      </p>
+      <p class="text-warm-gray leading-relaxed mb-6 text-base lg:text-lg">
+        Our first collection featured just three pieces. Today, we serve over 5,000 customers across Pakistan with a curated range of premium clothing that blends timeless design with contemporary sensibility.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="bg-charcoal text-ivory py-20 lg:py-28 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="text-center mb-16">
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-4">OUR VALUES</p>
+      <h2 class="font-display text-4xl lg:text-6xl font-bold">What We Stand For</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 lg:gap-16">
+      <div class="border-t border-gold/30 pt-8">
+        <p class="font-display text-6xl font-bold text-gold mb-4">01</p>
+        <h3 class="font-display text-2xl font-bold mb-4">Craftsmanship</h3>
+        <p class="text-ivory/60 leading-relaxed">Every stitch, seam, and detail is considered. We work with skilled artisans who take pride in their craft.</p>
+      </div>
+      <div class="border-t border-gold/30 pt-8">
+        <p class="font-display text-6xl font-bold text-gold mb-4">02</p>
+        <h3 class="font-display text-2xl font-bold mb-4">Quality</h3>
+        <p class="text-ivory/60 leading-relaxed">We source only the finest fabrics and materials. If it doesn't meet our standards, it doesn't leave our studio.</p>
+      </div>
+      <div class="border-t border-gold/30 pt-8">
+        <p class="font-display text-6xl font-bold text-gold mb-4">03</p>
+        <h3 class="font-display text-2xl font-bold mb-4">Accessibility</h3>
+        <p class="text-ivory/60 leading-relaxed">Premium design shouldn't require a premium price tag. We keep our margins honest and our prices fair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-ivory py-20 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    <div>
+      <p class="font-display text-6xl lg:text-7xl font-bold text-gold mb-3">5K+</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">HAPPY CUSTOMERS</p>
+    </div>
+    <div>
+      <p class="font-display text-6xl lg:text-7xl font-bold text-gold mb-3">100%</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">QUALITY GUARANTEED</p>
+    </div>
+    <div>
+      <p class="font-display text-6xl lg:text-7xl font-bold text-gold mb-3">7</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">DAY RETURNS</p>
+    </div>
+    <div>
+      <p class="font-display text-6xl lg:text-7xl font-bold text-gold mb-3">24/7</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">SUPPORT</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-gold text-charcoal py-20 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+    <h2 class="font-display text-4xl lg:text-6xl font-bold mb-6">Ready to Experience Zaeem?</h2>
+    <a href="/shop.html" class="btn-magnetic inline-flex items-center gap-4 bg-charcoal text-ivory px-12 py-5 text-[10px] tracking-[0.5em]">
+      <span>EXPLORE COLLECTION</span><span>→</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal text-ivory pt-20 pb-8 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div>
+      <p class="font-display text-3xl font-bold tracking-[0.5em] mb-2">ZAEEM</p>
+      <p class="text-[10px] tracking-[0.6em] text-gold mb-6">APPAREL</p>
+      <p class="text-ivory/50 text-sm font-serif mb-8">Contemporary luxury clothing for the modern individual.</p>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">SHOP</p>
+      <a href="/shop.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">All Products</a>
+      <a href="/shop.html?category=Men" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Men</a>
+      <a href="/shop.html?category=Women" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Women</a>
+      <a href="/shop.html?category=Kids" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Kids</a>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">HELP</p>
+      <a href="/size-guide.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Size Guide</a>
+      <a href="/payment.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Payment</a>
+      <a href="/faq.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">FAQs</a>
+      <a href="/contact.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Contact</a>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">CONTACT</p>
+      <p class="text-ivory/60 text-sm mb-3 break-all">Zaeemapparel77@gmail.com</p>
+      <p class="text-ivory/60 text-sm mb-3">+92 319 3773788</p>
+      <p class="text-ivory/60 text-sm">Pakistan</p>
+    </div>
+  </div>
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 border-t border-ivory/10 text-center">
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">© 2026 ZAEEM APPAREL</p>
+  </div>
+</footer>
+
+<script>
+var dotsBtn = document.getElementById('dotsBtn');
+var dotsMenu = document.getElementById('dotsMenu');
+dotsBtn.addEventListener('click', function(e) { e.stopPropagation(); dotsMenu.classList.toggle('open'); });
+document.addEventListener('click', function(e) { if (!dotsMenu.contains(e.target) && !dotsBtn.contains(e.target)) dotsMenu.classList.remove('open'); });
+document.getElementById('mobileMenuBtn').addEventListener('click', function() { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+</script>
+</body>
+</html>

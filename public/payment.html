@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Payment — ZAEEM APPAREL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { 'display': ['Bodoni Moda', 'serif'], 'serif': ['DM Serif Display', 'serif'], 'body': ['DM Sans', 'sans-serif'] },
+  colors: { 'gold': '#b8925a', 'gold-dark': '#8b6f3d', 'ivory': '#faf8f4', 'charcoal': '#0a0a0a', 'warm-gray': '#6b6560' }
+}}}
+</script>
+</head>
+<body class="bg-ivory text-charcoal">
+
+<header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-xl border-b border-charcoal/10 w-full">
+  <nav class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between gap-4">
+    <button id="mobileMenuBtn" class="lg:hidden p-2 -ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="/" class="text-center lg:text-left"><p class="font-display text-xl sm:text-2xl font-bold tracking-[0.5em] leading-none">ZAEEM</p><p class="text-[9px] tracking-[0.6em] text-gold mt-1.5">APPAREL</p></a>
+    <ul class="hidden lg:flex gap-12 xl:gap-16 text-[10px] tracking-[0.5em]">
+      <li><a href="/" class="link-underline hover:text-gold">HOME</a></li>
+      <li><a href="/shop.html" class="link-underline hover:text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="link-underline hover:text-gold">ABOUT</a></li>
+      <li><a href="/contact.html" class="link-underline hover:text-gold">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center gap-1 sm:gap-3">
+      <button id="cartBtn" class="p-2 hover:text-gold relative"><svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg><span id="cartCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span></button>
+      <div class="relative">
+        <button id="dotsBtn" class="dots-btn p-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></button>
+        <div id="dotsMenu" class="dots-menu absolute top-full right-0 mt-2 w-[280px] bg-ivory border border-charcoal/10 z-50">
+          <div class="p-2">
+            <a href="/shop.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">🛍️ <span>Shop All</span></a>
+            <a href="/about.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📖 <span>About</span></a>
+            <a href="/size-guide.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📏 <span>Size Guide</span></a>
+            <a href="/faq.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">❓ <span>FAQs</span></a>
+            <a href="/contact.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📞 <span>Contact</span></a>
+            <a href="https://wa.me/923193773788" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-green-50 text-sm text-green-700">💬 <span>WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="bg-ivory border-b border-charcoal/10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 text-center">
+    <p class="text-gold text-[10px] tracking-[0.5em] mb-4">SECURE PAYMENTS</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">Payment Methods</h1>
+    <p class="font-serif italic text-xl text-warm-gray max-w-2xl mx-auto">Simple, secure, and flexible options for every customer.</p>
+  </div>
+</section>
+
+<section class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 w-full">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white border border-charcoal/10 p-10 text-center">
+      <p class="text-5xl mb-6">💵</p>
+      <h3 class="font-display text-2xl font-bold mb-4">Cash on Delivery</h3>
+      <p class="text-warm-gray leading-relaxed mb-6">Pay in cash when your order arrives at your doorstep. Available all over Pakistan.</p>
+      <p class="text-[10px] tracking-[0.4em] text-gold">AVAILABLE NOW</p>
+    </div>
+
+    <div class="bg-white border border-charcoal/10 p-10 text-center opacity-50 relative">
+      <span class="absolute top-4 right-4 bg-gold text-charcoal text-[9px] px-3 py-1 tracking-[0.3em]">SOON</span>
+      <p class="text-5xl mb-6">📱</p>
+      <h3 class="font-display text-2xl font-bold mb-4">JazzCash</h3>
+      <p class="text-warm-gray leading-relaxed mb-6">Pay instantly via your JazzCash mobile wallet. Fast and secure.</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">COMING SOON</p>
+    </div>
+
+    <div class="bg-white border border-charcoal/10 p-10 text-center opacity-50 relative">
+      <span class="absolute top-4 right-4 bg-gold text-charcoal text-[9px] px-3 py-1 tracking-[0.3em]">SOON</span>
+      <p class="text-5xl mb-6">💳</p>
+      <h3 class="font-display text-2xl font-bold mb-4">Easypaisa</h3>
+      <p class="text-warm-gray leading-relaxed mb-6">Pay via Easypaisa wallet. Convenient and instant.</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">COMING SOON</p>
+    </div>
+
+    <div class="bg-white border border-charcoal/10 p-10 text-center opacity-50 relative">
+      <span class="absolute top-4 right-4 bg-gold text-charcoal text-[9px] px-3 py-1 tracking-[0.3em]">SOON</span>
+      <p class="text-5xl mb-6">🏦</p>
+      <h3 class="font-display text-2xl font-bold mb-4">Bank Transfer</h3>
+      <p class="text-warm-gray leading-relaxed mb-6">Direct bank transfer. Details shared on request.</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">COMING SOON</p>
+    </div>
+
+    <div class="bg-white border border-charcoal/10 p-10 text-center opacity-50 relative">
+      <span class="absolute top-4 right-4 bg-gold text-charcoal text-[9px] px-3 py-1 tracking-[0.3em]">SOON</span>
+      <p class="text-5xl mb-6">💳</p>
+      <h3 class="font-display text-2xl font-bold mb-4">Debit/Credit Card</h3>
+      <p class="text-warm-gray leading-relaxed mb-6">Pay with any Visa or Mastercard.</p>
+      <p class="text-[10px] tracking-[0.4em] text-warm-gray">COMING SOON</p>
+    </div>
+
+    <div class="bg-gold/10 border border-gold/30 p-10 text-center">
+      <p class="text-5xl mb-6">🔒</p>
+      <h3 class="font-display text-2xl font-bold mb-4">100% Secure</h3>
+      <p class="text-warm-gray leading-relaxed mb-6">All transactions are encrypted and secure. Your data is safe with us.</p>
+      <p class="text-[10px] tracking-[0.4em] text-gold">GUARANTEED</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-charcoal text-ivory py-20 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+    <h2 class="font-display text-3xl lg:text-5xl font-bold mb-6">Questions About Payment?</h2>
+    <p class="font-serif italic text-xl text-ivory/60 mb-8">We're here to help.</p>
+    <a href="/contact.html" class="btn-magnetic inline-flex items-center gap-4 bg-gold text-charcoal px-12 py-5 text-[10px] tracking-[0.5em]">
+      <span>CONTACT US</span><span>→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-ivory pt-16 pb-8 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 border-t border-ivory/10 text-center">
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">© 2026 ZAEEM APPAREL</p>
+  </div>
+</footer>
+
+<script>
+var dotsBtn = document.getElementById('dotsBtn'); var dotsMenu = document.getElementById('dotsMenu');
+dotsBtn.addEventListener('click', function(e) { e.stopPropagation(); dotsMenu.classList.toggle('open'); });
+document.addEventListener('click', function(e) { if (!dotsMenu.contains(e.target) && !dotsBtn.contains(e.target)) dotsMenu.classList.remove('open'); });
+document.getElementById('mobileMenuBtn').addEventListener('click', function() { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+</script>
+</body>
+</html>

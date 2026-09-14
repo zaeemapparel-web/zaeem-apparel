@@ -1,0 +1,199 @@
+/* ═══════════════════════════════════════════════
+   ZAEEM APPAREL — NEW DESIGN SYSTEM 2026
+   ═══════════════════════════════════════════════ */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: #faf8f4;
+  color: #0a0a0a;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+.font-display { font-family: 'Bodoni Moda', serif; }
+.font-serif { font-family: 'DM Serif Display', serif; }
+
+/* ═══ Marquee ═══ */
+.marquee {
+  display: inline-flex;
+  animation: marquee 50s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ═══ Reveal Animations ═══ */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ═══ Gold Text ═══ */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #b8925a 0%, #e5c98e 50%, #8b6f3d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══ Elegant Divider ═══ */
+.divider-gold {
+  background: linear-gradient(90deg, transparent, #b8925a, transparent);
+  height: 1px;
+}
+
+/* ═══ Product Card ═══ */
+.product-card {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover {
+  transform: translateY(-12px);
+}
+
+/* ═══ Magnetic Button ═══ */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-magnetic span {
+  position: relative;
+  z-index: 2;
+}
+.btn-magnetic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #b8925a, #e5c98e);
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+.btn-magnetic:hover::before {
+  transform: translateY(0);
+}
+
+/* ═══ 3 DOTS BUTTON ═══ */
+.dots-btn {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 50%;
+}
+.dots-btn:hover {
+  background: rgba(184, 146, 90, 0.1);
+}
+.dots-btn:hover svg circle,
+.dots-btn.active svg circle {
+  fill: #b8925a;
+}
+.dots-btn.active {
+  background: rgba(184, 146, 90, 0.15);
+}
+
+.dots-menu {
+  transform-origin: top right;
+  transform: scale(0.9) translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 25px 70px -20px rgba(0,0,0,0.3);
+  max-height: 480px;
+  overflow-y: auto;
+}
+.dots-menu.open {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.dots-menu::-webkit-scrollbar { width: 4px; }
+.dots-menu::-webkit-scrollbar-thumb { background: #b8925a; }
+
+/* ═══ Scrollbar ═══ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #faf8f4; }
+::-webkit-scrollbar-thumb { background: #b8925a; }
+::-webkit-scrollbar-thumb:hover { background: #8b6f3d; }
+
+/* ═══ Toast ═══ */
+.toast-notification {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #0a0a0a;
+  color: #fff;
+  padding: 18px 36px;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(184, 146, 90, 0.4);
+}
+.toast-notification.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+::selection {
+  background: #b8925a;
+  color: #fff;
+}
+
+/* ═══ Hover Image Zoom ═══ */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* ═══ Link Underline Animation ═══ */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #b8925a;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link-underline:hover::after {
+  width: 100%;
+}

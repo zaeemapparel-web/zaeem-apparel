@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product — ZAEEM APPAREL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { 'display': ['Bodoni Moda', 'serif'], 'serif': ['DM Serif Display', 'serif'], 'body': ['DM Sans', 'sans-serif'] },
+    colors: { 'gold': '#b8925a', 'gold-dark': '#8b6f3d', 'gold-light': '#e5c98e', 'ivory': '#faf8f4', 'charcoal': '#0a0a0a', 'warm-gray': '#6b6560' }
+  }}
+}
+</script>
+</head>
+<body class="bg-ivory text-charcoal">
+
+<!-- TOP TICKER -->
+<div class="bg-charcoal text-ivory text-[10px] tracking-[0.4em] py-3 overflow-hidden w-full">
+  <div class="marquee whitespace-nowrap">
+    <span class="mx-16">FREE SHIPPING ABOVE RS. 3000</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">PREMIUM QUALITY GUARANTEED</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">CASH ON DELIVERY NATIONWIDE</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">7-DAY EASY RETURNS</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">FREE SHIPPING ABOVE RS. 3000</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">PREMIUM QUALITY GUARANTEED</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">CASH ON DELIVERY NATIONWIDE</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">7-DAY EASY RETURNS</span>
+    <span class="mx-16 text-gold">◆</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-xl border-b border-charcoal/10 w-full">
+  <nav class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between gap-4">
+
+    <button id="mobileMenuBtn" class="lg:hidden flex-shrink-0 p-2 -ml-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2">
+        <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+
+    <a href="/" class="flex-shrink-0 text-center lg:text-left">
+      <p class="font-display text-xl sm:text-2xl lg:text-[26px] font-bold tracking-[0.5em] leading-none">ZAEEM</p>
+      <p class="text-[8px] sm:text-[9px] tracking-[0.6em] text-gold mt-1.5">APPAREL</p>
+    </a>
+
+    <ul class="hidden lg:flex gap-12 xl:gap-16 text-[10px] font-medium tracking-[0.5em]">
+      <li><a href="/" class="link-underline hover:text-gold transition">HOME</a></li>
+      <li><a href="/shop.html" class="link-underline hover:text-gold transition">SHOP</a></li>
+      <li><a href="/about.html" class="link-underline hover:text-gold transition">ABOUT</a></li>
+      <li><a href="/contact.html" class="link-underline hover:text-gold transition">CONTACT</a></li>
+    </ul>
+
+    <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
+      <button id="searchToggle" class="p-2 hover:text-gold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+          <path stroke-linecap="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </button>
+      <button id="wishlistBtn" class="p-2 hover:text-gold transition relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+          <path stroke-linecap="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+        </svg>
+        <span id="wishlistCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </button>
+      <button id="cartBtn" class="p-2 hover:text-gold transition relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+          <path stroke-linecap="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+        </svg>
+        <span id="cartCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </button>
+      <div class="relative flex-shrink-0 ml-1">
+        <button id="dotsBtn" class="dots-btn p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/>
+          </svg>
+        </button>
+        <div id="dotsMenu" class="dots-menu absolute top-full right-0 mt-2 w-[280px] bg-ivory border border-charcoal/10 z-50">
+          <div class="p-2">
+            <a href="/shop.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm"><span>🛍️</span><span>Shop All</span></a>
+            <a href="/about.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm"><span>📖</span><span>About</span></a>
+            <a href="/size-guide.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm"><span>📏</span><span>Size Guide</span></a>
+            <a href="/payment.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm"><span>💳</span><span>Payment</span></a>
+            <a href="/faq.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm"><span>❓</span><span>FAQs</span></a>
+            <a href="/contact.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm"><span>📞</span><span>Contact</span></a>
+            <a href="https://wa.me/923193773788" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-green-50 text-sm text-green-700"><span>💬</span><span>WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-charcoal/10 bg-ivory w-full">
+    <ul class="flex flex-col p-6 gap-1 text-[11px] tracking-[0.5em]">
+      <li><a href="/" class="block py-4 border-b border-charcoal/10 hover:text-gold">HOME</a></li>
+      <li><a href="/shop.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">ABOUT</a></li>
+      <li><a href="/contact.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">CONTACT</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<section class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-6 w-full">
+  <p class="text-[10px] tracking-[0.4em] text-warm-gray">
+    <a href="/" class="hover:text-gold">HOME</a>
+    <span class="mx-2">/</span>
+    <a href="/shop.html" class="hover:text-gold">SHOP</a>
+    <span class="mx-2">/</span>
+    <span id="breadcrumbName" class="text-charcoal">PRODUCT</span>
+  </p>
+</section>
+
+<!-- PRODUCT DETAIL -->
+<section id="productSection" class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pb-16 lg:pb-24 w-full">
+  <div id="productLoading" class="text-center py-32">
+    <p class="font-serif italic text-2xl text-warm-gray">Loading product...</p>
+  </div>
+
+  <div id="productContent" class="hidden grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+    <!-- LEFT: IMAGE -->
+    <div class="lg:col-span-7">
+      <div class="relative bg-gradient-to-br from-ivory to-charcoal/5 aspect-square overflow-hidden group">
+        <img id="productImage" src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" />
+        <div class="absolute top-6 left-6 bg-charcoal text-ivory text-[9px] tracking-[0.4em] px-3 py-2" id="productBadge">NEW</div>
+      </div>
+
+      <!-- Thumbnails (placeholder) -->
+      <div class="grid grid-cols-4 gap-3 mt-4">
+        <div class="aspect-square bg-gradient-to-br from-gold/20 to-gold/5 border-2 border-gold cursor-pointer"></div>
+        <div class="aspect-square bg-gradient-to-br from-charcoal/10 to-charcoal/5 cursor-pointer hover:border-gold border-2 border-transparent transition"></div>
+        <div class="aspect-square bg-gradient-to-br from-gold/10 to-ivory cursor-pointer hover:border-gold border-2 border-transparent transition"></div>
+        <div class="aspect-square bg-gradient-to-br from-charcoal/20 to-charcoal/5 cursor-pointer hover:border-gold border-2 border-transparent transition"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: INFO -->
+    <div class="lg:col-span-5">
+
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-4" id="productCategory">CATEGORY</p>
+
+      <h1 class="font-display text-4xl lg:text-5xl font-bold mb-6 leading-tight" id="productName">Product Name</h1>
+
+      <div class="flex items-center gap-4 mb-6">
+        <p class="font-display text-3xl font-bold text-gold" id="productPrice">Rs. 0</p>
+        <span class="text-warm-gray text-sm line-through hidden" id="productOldPrice">Rs. 0</span>
+      </div>
+
+      <div class="flex items-center gap-3 mb-8 pb-8 border-b border-charcoal/10">
+        <p class="text-gold text-sm tracking-widest">★★★★★</p>
+        <p class="text-[11px] text-warm-gray tracking-wider">128 REVIEWS</p>
+        <span class="text-charcoal/30 mx-2">•</span>
+        <p class="text-[11px] text-green-600 tracking-wider" id="productStock">IN STOCK</p>
+      </div>
+
+      <p class="text-warm-gray leading-relaxed mb-8 text-base" id="productDescription">
+        Product description will appear here.
+      </p>
+
+      <!-- SIZE SELECTION -->
+      <div class="mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-[10px] tracking-[0.5em] text-charcoal">SELECT SIZE</p>
+          <a href="/size-guide.html" class="text-[10px] tracking-[0.3em] text-gold hover:underline">SIZE GUIDE →</a>
+        </div>
+        <div class="flex flex-wrap gap-2" id="sizeOptions"></div>
+      </div>
+
+      <!-- COLOR SELECTION -->
+      <div class="mb-6" id="colorSection">
+        <p class="text-[10px] tracking-[0.5em] text-charcoal mb-3">SELECT COLOR</p>
+        <div class="flex flex-wrap gap-2" id="colorOptions"></div>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="mb-8">
+        <p class="text-[10px] tracking-[0.5em] text-charcoal mb-3">QUANTITY</p>
+        <div class="inline-flex items-center border border-charcoal/20">
+          <button onclick="changeQtyDetail(-1)" class="w-12 h-12 text-xl hover:bg-charcoal hover:text-ivory transition">−</button>
+          <span id="detailQty" class="w-16 text-center font-display text-lg font-bold">1</span>
+          <button onclick="changeQtyDetail(1)" class="w-12 h-12 text-xl hover:bg-charcoal hover:text-ivory transition">+</button>
+        </div>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="space-y-3 mb-8">
+        <button onclick="addToCartDetail()" class="btn-magnetic w-full bg-charcoal text-ivory py-5 text-[11px] tracking-[0.5em] hover:text-charcoal transition-all duration-500">
+          <span>ADD TO BAG</span>
+        </button>
+        <a id="whatsappOrderBtn" href="#" target="_blank" class="btn-magnetic w-full bg-green-600 text-white py-5 text-[11px] tracking-[0.5em] flex items-center justify-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>ORDER ON WHATSAPP</span>
+        </a>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div class="grid grid-cols-3 gap-4 pt-8 border-t border-charcoal/10">
+        <div class="text-center">
+          <p class="text-2xl mb-2">🚚</p>
+          <p class="text-[9px] tracking-[0.3em] text-warm-gray">FREE SHIPPING</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl mb-2">↩️</p>
+          <p class="text-[9px] tracking-[0.3em] text-warm-gray">7-DAY RETURNS</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl mb-2">💵</p>
+          <p class="text-[9px] tracking-[0.3em] text-warm-gray">COD AVAILABLE</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="bg-charcoal py-16 lg:py-24 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="text-center mb-12">
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-3">YOU MAY ALSO LIKE</p>
+      <h2 class="font-display text-3xl lg:text-5xl font-bold text-ivory">Related Pieces</h2>
+    </div>
+    <div id="relatedGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+      <p class="col-span-full text-center text-ivory/50 py-12 font-serif italic">Loading...</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal text-ivory pt-20 pb-8 w-full border-t border-gold/10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div>
+      <p class="font-display text-3xl font-bold tracking-[0.5em] mb-2">ZAEEM</p>
+      <p class="text-[10px] tracking-[0.6em] text-gold mb-6">APPAREL</p>
+      <p class="text-ivory/50 text-sm font-serif">Contemporary luxury clothing for the modern individual.</p>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">SHOP</p>
+      <a href="/shop.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">All Products</a>
+      <a href="/shop.html?category=Men" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Men</a>
+      <a href="/shop.html?category=Women" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Women</a>
+      <a href="/shop.html?category=Kids" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Kids</a>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">HELP</p>
+      <a href="/size-guide.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Size Guide</a>
+      <a href="/payment.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Payment</a>
+      <a href="/faq.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">FAQs</a>
+      <a href="/contact.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold">Contact</a>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">CONTACT</p>
+      <p class="text-ivory/60 text-sm mb-3 break-all">Zaeemapparel77@gmail.com</p>
+      <p class="text-ivory/60 text-sm mb-3">+92 319 3773788</p>
+      <p class="text-ivory/60 text-sm">Pakistan</p>
+    </div>
+  </div>
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 border-t border-ivory/10 text-center">
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">© 2026 ZAEEM APPAREL</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/923193773788" target="_blank" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- CART SIDEBAR -->
+<div id="cartOverlay" class="fixed inset-0 bg-black/60 hidden z-40 backdrop-blur-sm"></div>
+<aside id="cartSidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-ivory z-50 transform translate-x-full transition-transform duration-500 flex flex-col">
+  <div class="p-6 border-b border-charcoal/10 flex justify-between items-center">
+    <div>
+      <h3 class="font-display text-2xl font-bold">Your Bag</h3>
+      <p class="text-[10px] tracking-[0.4em] text-gold mt-1">ZAEEM APPAREL</p>
+    </div>
+    <button id="closeCart" class="text-3xl hover:text-gold p-2">×</button>
+  </div>
+  <div id="cartItems" class="flex-1 overflow-y-auto p-6"></div>
+  <div class="p-6 border-t border-charcoal/10 bg-white">
+    <div class="flex justify-between font-display text-xl font-bold mb-5">
+      <span>Total:</span>
+      <span id="cartTotal" class="text-gold">Rs. 0</span>
+    </div>
+    <button onclick="checkout()" class="btn-magnetic w-full bg-charcoal text-ivory py-4 text-[10px] tracking-[0.5em] mb-3">
+      <span>PROCEED TO CHECKOUT</span>
+    </button>
+    <button onclick="closeCartFn()" class="w-full border border-charcoal/20 py-3.5 text-[10px] tracking-[0.5em] hover:border-charcoal transition">
+      CONTINUE SHOPPING
+    </button>
+  </div>
+</aside>
+
+<script>
+var API_URL = '/api/products';
+var cart = [];
+var allProducts = [];
+var currentProduct = null;
+var selectedSize = null;
+var selectedColor = null;
+var detailQty = 1;
+
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+
+  if (!id) {
+    document.getElementById('productLoading').innerHTML = '<p class="font-serif italic text-2xl text-warm-gray">Product not found.</p>';
+    return;
+  }
+
+  loadProduct(id);
+  renderCart();
+  initMenuHandlers();
+});
+
+function loadProduct(id) {
+  fetch(API_URL)
+    .then(function(r) { return r.json(); })
+    .then(function(products) {
+      allProducts = products;
+      var p = products.find(function(x) { return x.id == id; });
+      if (!p) {
+        document.getElementById('productLoading').innerHTML = '<p class="font-serif italic text-2xl text-warm-gray">Product not found.</p>';
+        return;
+      }
+      currentProduct = p;
+      renderProduct(p);
+      renderRelated(products, p);
+    })
+    .catch(function() {
+      document.getElementById('productLoading').innerHTML = '<p class="text-red-500">Failed to load product.</p>';
+    });
+}
+
+function renderProduct(p) {
+  document.getElementById('productLoading').classList.add('hidden');
+  document.getElementById('productContent').classList.remove('hidden');
+
+  document.title = p.name + ' — ZAEEM APPAREL';
+  document.getElementById('breadcrumbName').textContent = p.name.toUpperCase();
+  document.getElementById('productCategory').textContent = (p.category || 'NEW').toUpperCase();
+  document.getElementById('productName').textContent = p.name;
+  document.getElementById('productPrice').textContent = 'Rs. ' + parseFloat(p.price).toLocaleString();
+  document.getElementById('productDescription').textContent = p.description || 'Premium quality fabric, expertly crafted for the modern individual.';
+
+  if (p.image) {
+    document.getElementById('productImage').src = p.image;
+  } else {
+    document.getElementById('productImage').src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="800"%3E%3Crect fill="%23faf8f4" width="800" height="800"/%3E%3Ctext x="50%25" y="50%25" font-family="serif" font-size="200" fill="%23b8925a" text-anchor="middle" dy=".3em"%3E' + p.name.charAt(0).toUpperCase() + '%3C/text%3E%3C/svg%3E';
+  }
+
+  // Sizes
+  var sizeHtml = '';
+  if (p.sizes && p.sizes.length) {
+    p.sizes.forEach(function(s) {
+      sizeHtml += '<button onclick="selectSize(\'' + s + '\', this)" class="size-btn min-w-[56px] h-12 px-4 border border-charcoal/20 text-sm tracking-[0.2em] hover:border-gold transition">' + s + '</button>';
+    });
+  } else {
+    sizeHtml = '<p class="text-warm-gray text-sm italic">One size fits all</p>';
+  }
+  document.getElementById('sizeOptions').innerHTML = sizeHtml;
+
+  // Colors
+  var colorHtml = '';
+  if (p.colors && p.colors.length) {
+    p.colors.forEach(function(c) {
+      colorHtml += '<button onclick="selectColor(\'' + c + '\', this)" class="color-btn px-4 py-2 border border-charcoal/20 text-sm tracking-[0.2em] hover:border-gold transition">' + c + '</button>';
+    });
+  } else {
+    document.getElementById('colorSection').style.display = 'none';
+  }
+  document.getElementById('colorOptions').innerHTML = colorHtml;
+
+  // WhatsApp order
+  updateWhatsAppLink();
+}
+
+function selectSize(size, btn) {
+  selectedSize = size;
+  document.querySelectorAll('.size-btn').forEach(function(b) {
+    b.classList.remove('bg-charcoal', 'text-ivory', 'border-charcoal');
+  });
+  btn.classList.add('bg-charcoal', 'text-ivory', 'border-charcoal');
+  updateWhatsAppLink();
+}
+
+function selectColor(color, btn) {
+  selectedColor = color;
+  document.querySelectorAll('.color-btn').forEach(function(b) {
+    b.classList.remove('bg-charcoal', 'text-ivory', 'border-charcoal');
+  });
+  btn.classList.add('bg-charcoal', 'text-ivory', 'border-charcoal');
+  updateWhatsAppLink();
+}
+
+function changeQtyDetail(d) {
+  detailQty += d;
+  if (detailQty < 1) detailQty = 1;
+  if (detailQty > 10) detailQty = 10;
+  document.getElementById('detailQty').textContent = detailQty;
+  updateWhatsAppLink();
+}
+
+function updateWhatsAppLink() {
+  if (!currentProduct) return;
+  var msg = 'Hello Zaeem Apparel,%0A%0AI want to order:%0A%0A';
+  msg += '• ' + currentProduct.name + '%0A';
+  msg += 'Quantity: ' + detailQty + '%0A';
+  if (selectedSize) msg += 'Size: ' + selectedSize + '%0A';
+  if (selectedColor) msg += 'Color: ' + selectedColor + '%0A';
+  msg += 'Price: Rs. ' + (parseFloat(currentProduct.price) * detailQty).toLocaleString();
+  document.getElementById('whatsappOrderBtn').href = 'https://wa.me/923193773788?text=' + msg;
+}
+
+function addToCartDetail() {
+  if (!currentProduct) return;
+  if (currentProduct.sizes && currentProduct.sizes.length && !selectedSize) {
+    showToast('Please select a size');
+    return;
+  }
+
+  var existing = cart.find(function(x) { return x.id === currentProduct.id && x.size === selectedSize; });
+  if (existing) {
+    existing.qty += detailQty;
+  } else {
+    cart.push({
+      id: currentProduct.id,
+      name: currentProduct.name,
+      price: parseFloat(currentProduct.price),
+      qty: detailQty,
+      size: selectedSize,
+      color: selectedColor
+    });
+  }
+  renderCart();
+  openCart();
+  showToast('Added to bag');
+}
+
+function renderRelated(products, current) {
+  var related = products.filter(function(p) { return p.id !== current.id; }).slice(0, 4);
+  var el = document.getElementById('relatedGrid');
+
+  if (related.length === 0) {
+    el.innerHTML = '<p class="col-span-full text-center text-ivory/50 py-12 font-serif italic">No related products</p>';
+    return;
+  }
+
+  var html = '';
+  related.forEach(function(p) {
+    var letter = p.name.charAt(0).toUpperCase();
+    html += '<a href="/product.html?id=' + p.id + '" class="group product-card bg-ivory block">';
+    html += '<div class="relative overflow-hidden bg-gradient-to-br from-ivory to-charcoal/5">';
+    if (p.image) {
+      html += '<img src="' + p.image + '" alt="' + p.name + '" class="w-full h-64 lg:h-80 object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />';
+    } else {
+      html += '<div class="w-full h-64 lg:h-80 flex items-center justify-center"><p class="font-display text-7xl text-gold/20 group-hover:text-gold/50 transition">' + letter + '</p></div>';
+    }
+    html += '</div>';
+    html += '<div class="p-4 text-center">';
+    html += '<h3 class="font-display text-base font-bold mb-2">' + p.name + '</h3>';
+    html += '<p class="font-display text-lg text-gold">Rs. ' + parseFloat(p.price).toLocaleString() + '</p>';
+    html += '</div></a>';
+  });
+  el.innerHTML = html;
+}
+
+function renderCart() {
+  var el = document.getElementById('cartItems');
+  if (cart.length === 0) {
+    el.innerHTML = '<div class="text-center py-20"><p class="text-6xl mb-6 opacity-20">🛍️</p><p class="font-serif italic text-xl text-warm-gray">Your bag is empty.</p></div>';
+  } else {
+    var h = '';
+    cart.forEach(function(i) {
+      h += '<div class="flex justify-between items-start border-b border-charcoal/10 pb-5 mb-5">';
+      h += '<div class="flex-1"><h4 class="font-display font-bold mb-1">' + i.name + '</h4>';
+      if (i.size) h += '<p class="text-[10px] text-warm-gray tracking-wider mb-1">Size: ' + i.size + '</p>';
+      h += '<p class="text-gold font-display font-bold mb-3">Rs. ' + i.price.toLocaleString() + '</p>';
+      h += '<div class="flex items-center gap-3">';
+      h += '<button onclick="changeQty(' + i.id + ', -1)" class="border w-8 h-8 hover:bg-charcoal hover:text-ivory transition">−</button>';
+      h += '<span class="text-sm px-2">' + i.qty + '</span>';
+      h += '<button onclick="changeQty(' + i.id + ', 1)" class="border w-8 h-8 hover:bg-charcoal hover:text-ivory transition">+</button>';
+      h += '</div></div>';
+      h += '<button onclick="removeFromCart(' + i.id + ')" class="text-red-500 text-[10px]">REMOVE</button></div>';
+    });
+    el.innerHTML = h;
+  }
+  var q = cart.reduce(function(s, i) { return s + i.qty; }, 0);
+  var t = cart.reduce(function(s, i) { return s + (i.price * i.qty); }, 0);
+  document.getElementById('cartCount').textContent = q;
+  document.getElementById('cartTotal').textContent = 'Rs. ' + t.toLocaleString();
+}
+
+function changeQty(id, d) {
+  var i = cart.find(function(x) { return x.id === id; });
+  if (!i) return;
+  i.qty += d;
+  if (i.qty <= 0) cart = cart.filter(function(x) { return x.id !== id; });
+  renderCart();
+}
+
+function removeFromCart(id) { cart = cart.filter(function(i) { return i.id !== id; }); renderCart(); }
+
+function checkout() {
+  if (cart.length === 0) { showToast('Bag empty'); return; }
+  var t = cart.reduce(function(s, i) { return s + (i.price * i.qty); }, 0);
+  var m = 'Hello Zaeem Apparel, I want to order:%0A%0A';
+  cart.forEach(function(i) {
+    m += '• ' + i.name;
+    if (i.size) m += ' (Size: ' + i.size + ')';
+    m += ' x' + i.qty + ' = Rs. ' + (i.price * i.qty).toLocaleString() + '%0A';
+  });
+  m += '%0ATotal: Rs. ' + t.toLocaleString() + '%0APayment: Cash on Delivery';
+  window.open('https://wa.me/923193773788?text=' + m, '_blank');
+}
+
+function openCart() {
+  document.getElementById('cartSidebar').classList.remove('translate-x-full');
+  document.getElementById('cartOverlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCartFn() {
+  document.getElementById('cartSidebar').classList.add('translate-x-full');
+  document.getElementById('cartOverlay').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('cartBtn').addEventListener('click', openCart);
+document.getElementById('closeCart').addEventListener('click', closeCartFn);
+document.getElementById('cartOverlay').addEventListener('click', closeCartFn);
+
+function initMenuHandlers() {
+  var dotsBtn = document.getElementById('dotsBtn');
+  var dotsMenu = document.getElementById('dotsMenu');
+  dotsBtn.addEventListener('click', function(e) { e.stopPropagation(); dotsMenu.classList.toggle('open'); dotsBtn.classList.toggle('active'); });
+  document.addEventListener('click', function(e) { if (!dotsMenu.contains(e.target) && !dotsBtn.contains(e.target)) { dotsMenu.classList.remove('open'); dotsBtn.classList.remove('active'); } });
+  document.querySelectorAll('.dots-link').forEach(function(l) { l.addEventListener('click', function() { dotsMenu.classList.remove('open'); dotsBtn.classList.remove('active'); }); });
+  document.getElementById('mobileMenuBtn').addEventListener('click', function() { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+  document.getElementById('searchToggle').addEventListener('click', function() { document.getElementById('searchBar').classList.toggle('hidden'); });
+}
+
+function showToast(msg) {
+  var o = document.querySelector('.toast-notification');
+  if (o) o.remove();
+  var t = document.createElement('div');
+  t.className = 'toast-notification';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(function() { t.classList.add('show'); }, 10);
+  setTimeout(function() { t.classList.remove('show'); setTimeout(function() { t.remove(); }, 400); }, 2500);
+}
+</script>
+</body>
+</html>

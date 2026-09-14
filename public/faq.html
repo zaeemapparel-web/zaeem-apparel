@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQs — ZAEEM APPAREL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { 'display': ['Bodoni Moda', 'serif'], 'serif': ['DM Serif Display', 'serif'], 'body': ['DM Sans', 'sans-serif'] },
+  colors: { 'gold': '#b8925a', 'gold-dark': '#8b6f3d', 'ivory': '#faf8f4', 'charcoal': '#0a0a0a', 'warm-gray': '#6b6560' }
+}}}
+</script>
+</head>
+<body class="bg-ivory text-charcoal">
+
+<header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-xl border-b border-charcoal/10 w-full">
+  <nav class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between gap-4">
+    <button id="mobileMenuBtn" class="lg:hidden p-2 -ml-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="/" class="text-center lg:text-left"><p class="font-display text-xl sm:text-2xl font-bold tracking-[0.5em] leading-none">ZAEEM</p><p class="text-[9px] tracking-[0.6em] text-gold mt-1.5">APPAREL</p></a>
+    <ul class="hidden lg:flex gap-12 xl:gap-16 text-[10px] tracking-[0.5em]">
+      <li><a href="/" class="link-underline hover:text-gold">HOME</a></li>
+      <li><a href="/shop.html" class="link-underline hover:text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="link-underline hover:text-gold">ABOUT</a></li>
+      <li><a href="/contact.html" class="link-underline hover:text-gold">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center gap-1 sm:gap-3">
+      <button id="cartBtn" class="p-2 hover:text-gold relative"><svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg><span id="cartCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span></button>
+      <div class="relative">
+        <button id="dotsBtn" class="dots-btn p-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg></button>
+        <div id="dotsMenu" class="dots-menu absolute top-full right-0 mt-2 w-[280px] bg-ivory border border-charcoal/10 z-50">
+          <div class="p-2">
+            <a href="/shop.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">🛍️ <span>Shop All</span></a>
+            <a href="/about.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📖 <span>About</span></a>
+            <a href="/size-guide.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📏 <span>Size Guide</span></a>
+            <a href="/payment.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">💳 <span>Payment</span></a>
+            <a href="/contact.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 text-sm">📞 <span>Contact</span></a>
+            <a href="https://wa.me/923193773788" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-green-50 text-sm text-green-700">💬 <span>WhatsApp</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="bg-ivory border-b border-charcoal/10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 text-center">
+    <p class="text-gold text-[10px] tracking-[0.5em] mb-4">COMMON QUESTIONS</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">FAQs</h1>
+    <p class="font-serif italic text-xl text-warm-gray max-w-2xl mx-auto">Everything you need to know about Zaeem Apparel.</p>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-24 w-full space-y-4">
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">How long does delivery take?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Standard delivery takes 3-5 working days across Pakistan. Major cities (Karachi, Lahore, Islamabad) usually receive orders within 2-3 days.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">Do you offer Cash on Delivery?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Yes! Cash on Delivery is available all over Pakistan. You can pay when you receive your order.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">What is your return policy?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">We offer a 7-day return and exchange policy. Products must be unused and in their original packaging. See our Return Policy for full details.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">How do I choose the right size?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Please refer to our Size Guide. All measurements are in inches. If you're between sizes, we recommend choosing the larger size.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">How can I track my order?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Once your order ships, we'll send you the tracking number via WhatsApp or SMS. You can also contact us directly on WhatsApp for updates.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">Is my payment information safe?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Absolutely. We never store any payment information. For Cash on Delivery orders, you pay directly to the courier.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">What if I receive a damaged product?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Contact us immediately on WhatsApp with photos. We'll replace damaged items at no cost to you within 7 days of delivery.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">Do you ship internationally?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">Currently we ship within Pakistan only. International shipping will be available soon.</div>
+  </details>
+
+  <details class="group border border-charcoal/10 hover:border-gold transition">
+    <summary class="flex justify-between items-center p-6 lg:p-8 cursor-pointer list-none">
+      <span class="font-display text-lg lg:text-xl font-bold pr-4">How can I contact you?</span>
+      <span class="text-gold text-3xl group-open:rotate-45 transition-transform duration-300">+</span>
+    </summary>
+    <div class="px-6 lg:px-8 pb-6 lg:pb-8 text-warm-gray leading-relaxed">WhatsApp: 0319 3773788<br/>Email: Zaeemapparel77@gmail.com<br/>Phone: +92 347 7907556</div>
+  </details>
+
+</section>
+
+<section class="bg-charcoal text-ivory py-20 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+    <h2 class="font-display text-3xl lg:text-5xl font-bold mb-6">Still Have Questions?</h2>
+    <p class="font-serif italic text-xl text-ivory/60 mb-8">Reach out to us directly.</p>
+    <a href="https://wa.me/923193773788" class="btn-magnetic inline-flex items-center gap-4 bg-gold text-charcoal px-12 py-5 text-[10px] tracking-[0.5em]">
+      <span>WHATSAPP US</span><span>→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-ivory pt-16 pb-8 w-full">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 border-t border-ivory/10 text-center">
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">© 2026 ZAEEM APPAREL</p>
+  </div>
+</footer>
+
+<script>
+var dotsBtn = document.getElementById('dotsBtn'); var dotsMenu = document.getElementById('dotsMenu');
+dotsBtn.addEventListener('click', function(e) { e.stopPropagation(); dotsMenu.classList.toggle('open'); });
+document.addEventListener('click', function(e) { if (!dotsMenu.contains(e.target) && !dotsBtn.contains(e.target)) dotsMenu.classList.remove('open'); });
+document.getElementById('mobileMenuBtn').addEventListener('click', function() { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+</script>
+</body>
+</html>

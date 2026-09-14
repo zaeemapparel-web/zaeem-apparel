@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop — ZAEEM APPAREL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { 'display': ['Bodoni Moda', 'serif'], 'serif': ['DM Serif Display', 'serif'], 'body': ['DM Sans', 'sans-serif'] },
+    colors: { 'gold': '#b8925a', 'gold-dark': '#8b6f3d', 'gold-light': '#e5c98e', 'ivory': '#faf8f4', 'charcoal': '#0a0a0a', 'warm-gray': '#6b6560' }
+  }}
+}
+</script>
+</head>
+<body class="bg-ivory text-charcoal">
+
+<!-- TOP TICKER -->
+<div class="bg-charcoal text-ivory text-[10px] tracking-[0.4em] py-3 overflow-hidden w-full">
+  <div class="marquee whitespace-nowrap">
+    <span class="mx-16">FREE SHIPPING ABOVE RS. 3000</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">PREMIUM QUALITY GUARANTEED</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">CASH ON DELIVERY NATIONWIDE</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">7-DAY EASY RETURNS</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">FREE SHIPPING ABOVE RS. 3000</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">PREMIUM QUALITY GUARANTEED</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">CASH ON DELIVERY NATIONWIDE</span>
+    <span class="mx-16 text-gold">◆</span>
+    <span class="mx-16">7-DAY EASY RETURNS</span>
+    <span class="mx-16 text-gold">◆</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-xl border-b border-charcoal/10 w-full">
+  <nav class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-5 flex items-center justify-between gap-4">
+    <button id="mobileMenuBtn" class="lg:hidden flex-shrink-0 p-2 -ml-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a href="/" class="flex-shrink-0 text-center lg:text-left">
+      <p class="font-display text-xl sm:text-2xl lg:text-[26px] font-bold tracking-[0.5em] leading-none">ZAEEM</p>
+      <p class="text-[8px] sm:text-[9px] tracking-[0.6em] text-gold mt-1.5">APPAREL</p>
+    </a>
+    <ul class="hidden lg:flex gap-12 xl:gap-16 text-[10px] font-medium tracking-[0.5em]">
+      <li><a href="/" class="link-underline hover:text-gold transition">HOME</a></li>
+      <li><a href="/shop.html" class="link-underline text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="link-underline hover:text-gold transition">ABOUT</a></li>
+      <li><a href="/contact.html" class="link-underline hover:text-gold transition">CONTACT</a></li>
+    </ul>
+    <div class="flex items-center gap-1 sm:gap-3 flex-shrink-0">
+      <button id="searchToggle" class="p-2 hover:text-gold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </button>
+      <button id="wishlistBtn" class="p-2 hover:text-gold transition relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        <span id="wishlistCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </button>
+      <button id="cartBtn" class="p-2 hover:text-gold transition relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span id="cartCount" class="absolute top-0.5 right-0.5 bg-gold text-white text-[8px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </button>
+      <div class="relative flex-shrink-0 ml-1">
+        <button id="dotsBtn" class="dots-btn p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
+        </button>
+        <div id="dotsMenu" class="dots-menu absolute top-full right-0 mt-2 w-[280px] bg-ivory border border-charcoal/10 z-50">
+          <div class="p-2">
+            <p class="text-[9px] tracking-[0.5em] text-gold px-4 py-3 border-b border-charcoal/10 mb-2">MENU</p>
+            <a href="/shop.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 transition text-sm"><span class="text-base">🛍️</span><div><p class="font-medium text-[13px]">Shop All</p><p class="text-[10px] text-warm-gray">Complete collection</p></div></a>
+            <a href="/about.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 transition text-sm"><span class="text-base">📖</span><div><p class="font-medium text-[13px]">About</p><p class="text-[10px] text-warm-gray">Our story</p></div></a>
+            <a href="/size-guide.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 transition text-sm"><span class="text-base">📏</span><div><p class="font-medium text-[13px]">Size Guide</p><p class="text-[10px] text-warm-gray">Find your fit</p></div></a>
+            <a href="/payment.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 transition text-sm"><span class="text-base">💳</span><div><p class="font-medium text-[13px]">Payment</p><p class="text-[10px] text-warm-gray">Cash on delivery</p></div></a>
+            <a href="/faq.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 transition text-sm"><span class="text-base">❓</span><div><p class="font-medium text-[13px]">FAQs</p><p class="text-[10px] text-warm-gray">Questions</p></div></a>
+            <a href="/contact.html" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-charcoal/5 transition text-sm"><span class="text-base">📞</span><div><p class="font-medium text-[13px]">Contact</p><p class="text-[10px] text-warm-gray">Get in touch</p></div></a>
+            <div class="border-t border-charcoal/10 my-2"></div>
+            <a href="https://wa.me/923193773788" target="_blank" class="dots-link flex items-center gap-3 px-4 py-3 hover:bg-green-50 transition text-sm"><span class="text-base">💬</span><div><p class="font-medium text-[13px] text-green-700">WhatsApp Order</p><p class="text-[10px] text-warm-gray">0319 3773788</p></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-charcoal/10 bg-ivory w-full">
+    <ul class="flex flex-col p-6 gap-1 text-[11px] font-medium tracking-[0.5em]">
+      <li><a href="/" class="block py-4 border-b border-charcoal/10 hover:text-gold">HOME</a></li>
+      <li><a href="/shop.html" class="block py-4 border-b border-charcoal/10 text-gold">SHOP</a></li>
+      <li><a href="/about.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">ABOUT</a></li>
+      <li><a href="/size-guide.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">SIZE GUIDE</a></li>
+      <li><a href="/payment.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">PAYMENT</a></li>
+      <li><a href="/faq.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">FAQS</a></li>
+      <li><a href="/contact.html" class="block py-4 border-b border-charcoal/10 hover:text-gold">CONTACT</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="bg-ivory border-b border-charcoal/10">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-20 text-center">
+    <p class="text-gold text-[10px] tracking-[0.5em] mb-4">COLLECTION 2026</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">All Pieces</h1>
+    <p class="font-serif italic text-lg sm:text-xl text-warm-gray max-w-xl mx-auto">Curated for the discerning. Explore our complete collection.</p>
+  </div>
+</section>
+
+<!-- SHOP LAYOUT -->
+<section class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 py-12 lg:py-16 w-full">
+  <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+
+    <!-- SIDEBAR -->
+    <aside class="lg:col-span-3">
+      <div class="hidden lg:block sticky top-32">
+        <div class="mb-8 pb-8 border-b border-charcoal/10">
+          <p class="text-[10px] tracking-[0.5em] text-gold mb-4">SEARCH</p>
+          <div class="relative">
+            <input type="text" id="shopSearchInput" placeholder="Search products..." class="w-full bg-transparent border-b border-charcoal/30 px-0 py-3 text-sm placeholder-charcoal/40 focus:outline-none focus:border-gold transition" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-0 top-1/2 -translate-y-1/2 text-charcoal/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+
+        <div class="mb-8 pb-8 border-b border-charcoal/10">
+          <p class="text-[10px] tracking-[0.5em] text-gold mb-4">CATEGORY</p>
+          <div class="space-y-3">
+            <button class="filter-btn active block w-full text-left text-sm py-1 hover:text-gold transition" data-category="all"><span class="flex items-center justify-between"><span>All Products</span><span class="text-gold">✓</span></span></button>
+            <button class="filter-btn block w-full text-left text-sm py-1 hover:text-gold transition" data-category="Men">Men's Wear</button>
+            <button class="filter-btn block w-full text-left text-sm py-1 hover:text-gold transition" data-category="Women">Women's Wear</button>
+            <button class="filter-btn block w-full text-left text-sm py-1 hover:text-gold transition" data-category="Kids">Kids Wear</button>
+            <button class="filter-btn block w-full text-left text-sm py-1 hover:text-gold transition" data-category="General">New Arrivals</button>
+          </div>
+        </div>
+
+        <div class="mb-8 pb-8 border-b border-charcoal/10">
+          <p class="text-[10px] tracking-[0.5em] text-gold mb-4">PRICE RANGE</p>
+          <div class="space-y-3">
+            <button class="price-filter block w-full text-left text-sm py-1 hover:text-gold transition" data-price="all">All Prices</button>
+            <button class="price-filter block w-full text-left text-sm py-1 hover:text-gold transition" data-price="0-1000">Under Rs. 1000</button>
+            <button class="price-filter block w-full text-left text-sm py-1 hover:text-gold transition" data-price="1000-2000">Rs. 1000 - 2000</button>
+            <button class="price-filter block w-full text-left text-sm py-1 hover:text-gold transition" data-price="2000-5000">Rs. 2000 - 5000</button>
+            <button class="price-filter block w-full text-left text-sm py-1 hover:text-gold transition" data-price="5000+">Rs. 5000+</button>
+          </div>
+        </div>
+
+        <button id="clearFilters" class="w-full border border-charcoal/30 py-3 text-[10px] tracking-[0.4em] hover:bg-charcoal hover:text-ivory transition">CLEAR ALL FILTERS</button>
+      </div>
+
+      <button id="mobileFilterBtn" class="lg:hidden w-full bg-charcoal text-ivory py-4 text-[10px] tracking-[0.4em] mb-6">FILTERS & SEARCH</button>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="lg:col-span-9">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 pb-6 border-b border-charcoal/10">
+        <p class="text-sm text-warm-gray">Showing <span id="productCount" class="text-charcoal font-medium">0</span> products</p>
+        <div class="flex items-center gap-4">
+          <p class="text-[10px] tracking-[0.4em] text-warm-gray hidden sm:block">SORT BY</p>
+          <select id="sortSelect" class="bg-transparent border border-charcoal/20 px-4 py-2 text-[11px] tracking-[0.2em] focus:outline-none focus:border-gold cursor-pointer">
+            <option value="newest">NEWEST</option>
+            <option value="price-low">PRICE: LOW → HIGH</option>
+            <option value="price-high">PRICE: HIGH → LOW</option>
+            <option value="name">NAME: A → Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <p class="col-span-full text-center text-warm-gray py-20 font-serif italic text-lg">Loading collection...</p>
+      </div>
+
+      <div id="noProducts" class="hidden text-center py-24">
+        <p class="font-display text-3xl text-charcoal/30 mb-4">No products found</p>
+        <p class="font-serif italic text-warm-gray mb-8">Try adjusting your filters or search term</p>
+        <button onclick="clearAllFilters()" class="border border-charcoal px-8 py-3 text-[10px] tracking-[0.4em] hover:bg-charcoal hover:text-ivory transition">CLEAR FILTERS</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE FILTERS -->
+<div id="mobileFilters" class="fixed inset-0 bg-charcoal/50 hidden z-40 lg:hidden"></div>
+<aside id="mobileFiltersPanel" class="fixed top-0 left-0 h-full w-full max-w-xs bg-ivory z-50 transform -translate-x-full transition-transform duration-500 flex flex-col lg:hidden">
+  <div class="p-6 border-b border-charcoal/10 flex justify-between items-center">
+    <h3 class="font-display text-xl font-bold">Filters</h3>
+    <button id="closeMobileFilters" class="text-3xl hover:text-gold">×</button>
+  </div>
+  <div class="flex-1 overflow-y-auto p-6">
+    <div class="mb-8 pb-8 border-b border-charcoal/10">
+      <p class="text-[10px] tracking-[0.5em] text-gold mb-4">SEARCH</p>
+      <input type="text" id="mobileSearchInput" placeholder="Search..." class="w-full bg-transparent border-b border-charcoal/30 py-3 text-sm focus:outline-none focus:border-gold" />
+    </div>
+    <div class="mb-8 pb-8 border-b border-charcoal/10">
+      <p class="text-[10px] tracking-[0.5em] text-gold mb-4">CATEGORY</p>
+      <div class="space-y-3">
+        <button class="mobile-filter-btn block w-full text-left text-sm py-1 hover:text-gold" data-category="all">All Products</button>
+        <button class="mobile-filter-btn block w-full text-left text-sm py-1 hover:text-gold" data-category="Men">Men's Wear</button>
+        <button class="mobile-filter-btn block w-full text-left text-sm py-1 hover:text-gold" data-category="Women">Women's Wear</button>
+        <button class="mobile-filter-btn block w-full text-left text-sm py-1 hover:text-gold" data-category="Kids">Kids Wear</button>
+        <button class="mobile-filter-btn block w-full text-left text-sm py-1 hover:text-gold" data-category="General">New Arrivals</button>
+      </div>
+    </div>
+    <div class="mb-8 pb-8 border-b border-charcoal/10">
+      <p class="text-[10px] tracking-[0.5em] text-gold mb-4">PRICE</p>
+      <div class="space-y-3">
+        <button class="mobile-price-btn block w-full text-left text-sm py-1 hover:text-gold" data-price="all">All Prices</button>
+        <button class="mobile-price-btn block w-full text-left text-sm py-1 hover:text-gold" data-price="0-1000">Under Rs. 1000</button>
+        <button class="mobile-price-btn block w-full text-left text-sm py-1 hover:text-gold" data-price="1000-2000">Rs. 1000 - 2000</button>
+        <button class="mobile-price-btn block w-full text-left text-sm py-1 hover:text-gold" data-price="2000-5000">Rs. 2000 - 5000</button>
+        <button class="mobile-price-btn block w-full text-left text-sm py-1 hover:text-gold" data-price="5000+">Rs. 5000+</button>
+      </div>
+    </div>
+    <button onclick="clearAllFilters()" class="w-full border border-charcoal/30 py-3 text-[10px] tracking-[0.4em] hover:bg-charcoal hover:text-ivory transition">CLEAR ALL</button>
+  </div>
+</aside>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal text-ivory pt-20 pb-8 w-full mt-20">
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div>
+      <p class="font-display text-3xl font-bold tracking-[0.5em] mb-2">ZAEEM</p>
+      <p class="text-[10px] tracking-[0.6em] text-gold mb-6">APPAREL</p>
+      <p class="text-ivory/50 text-sm font-serif leading-relaxed mb-8">Contemporary luxury clothing for the modern individual.</p>
+      <div class="flex gap-3">
+        <a href="#" class="w-10 h-10 border border-ivory/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-charcoal transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg></a>
+        <a href="#" class="w-10 h-10 border border-ivory/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-charcoal transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://wa.me/923193773788" class="w-10 h-10 border border-ivory/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-charcoal transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">SHOP</p>
+      <a href="/shop.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">All Products</a>
+      <a href="/shop.html?category=Men" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">Men</a>
+      <a href="/shop.html?category=Women" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">Women</a>
+      <a href="/shop.html?category=Kids" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">Kids</a>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">HELP</p>
+      <a href="/size-guide.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">Size Guide</a>
+      <a href="/payment.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">Payment</a>
+      <a href="/faq.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">FAQs</a>
+      <a href="/contact.html" class="block text-ivory/60 text-sm mb-3 hover:text-gold transition">Contact</a>
+    </div>
+    <div>
+      <p class="text-gold text-[10px] tracking-[0.5em] mb-6">CONTACT</p>
+      <p class="text-ivory/60 text-sm mb-3 break-all">Zaeemapparel77@gmail.com</p>
+      <p class="text-ivory/60 text-sm mb-3">+92 319 3773788</p>
+      <p class="text-ivory/60 text-sm mb-3">+92 347 7907556</p>
+      <p class="text-ivory/60 text-sm">Pakistan</p>
+    </div>
+  </div>
+  <div class="max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">© 2026 ZAEEM APPAREL</p>
+    <p class="text-ivory/40 text-[10px] tracking-[0.4em]">MADE IN PAKISTAN</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/923193773788" target="_blank" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- CART -->
+<div id="cartOverlay" class="fixed inset-0 bg-black/60 hidden z-40 backdrop-blur-sm"></div>
+<aside id="cartSidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-ivory z-50 transform translate-x-full transition-transform duration-500 flex flex-col">
+  <div class="p-6 border-b border-charcoal/10 flex justify-between items-center">
+    <div>
+      <h3 class="font-display text-2xl font-bold">Your Bag</h3>
+      <p class="text-[10px] tracking-[0.4em] text-gold mt-1">ZAEEM APPAREL</p>
+    </div>
+    <button id="closeCart" class="text-3xl hover:text-gold transition p-2">×</button>
+  </div>
+  <div id="cartItems" class="flex-1 overflow-y-auto p-6"></div>
+  <div class="p-6 border-t border-charcoal/10 bg-white">
+    <div class="flex justify-between font-display text-xl font-bold mb-5">
+      <span>Total:</span>
+      <span id="cartTotal" class="text-gold">Rs. 0</span>
+    </div>
+    <button onclick="checkout()" class="btn-magnetic w-full bg-charcoal text-ivory py-4 text-[10px] tracking-[0.5em] mb-3"><span>PROCEED TO CHECKOUT</span></button>
+    <button onclick="closeCartFn()" class="w-full border border-charcoal/20 py-3.5 text-[10px] tracking-[0.5em] hover:border-charcoal transition">CONTINUE SHOPPING</button>
+  </div>
+</aside>
+
+<script>
+var API_URL = '/api/products';
+var cart = [];
+var wishlist = [];
+var allProducts = [];
+var currentCategory = 'all';
+var currentPrice = 'all';
+var currentSort = 'newest';
+var currentSearch = '';
+
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var cat = params.get('category');
+  if (cat) currentCategory = cat;
+
+  loadProducts();
+  renderCart();
+  initFilters();
+});
+
+function loadProducts() {
+  fetch(API_URL)
+    .then(function(r) { return r.json(); })
+    .then(function(p) { allProducts = p; applyFiltersAndSort(); })
+    .catch(function() {
+      document.getElementById('productGrid').innerHTML = '<p class="col-span-full text-center text-red-500 py-20">Failed to load.</p>';
+    });
+}
+
+function applyFiltersAndSort() {
+  var filtered = allProducts.slice();
+
+  if (currentCategory !== 'all') {
+    filtered = filtered.filter(function(p) { return p.category === currentCategory; });
+  }
+
+  if (currentPrice !== 'all') {
+    filtered = filtered.filter(function(p) {
+      var price = parseFloat(p.price);
+      if (currentPrice === '0-1000') return price < 1000;
+      if (currentPrice === '1000-2000') return price >= 1000 && price < 2000;
+      if (currentPrice === '2000-5000') return price >= 2000 && price < 5000;
+      if (currentPrice === '5000+') return price >= 5000;
+      return true;
+    });
+  }
+
+  if (currentSearch) {
+    var q = currentSearch.toLowerCase();
+    filtered = filtered.filter(function(p) {
+      return p.name.toLowerCase().includes(q) || (p.category || '').toLowerCase().includes(q);
+    });
+  }
+
+  if (currentSort === 'price-low') filtered.sort(function(a, b) { return parseFloat(a.price) - parseFloat(b.price); });
+  else if (currentSort === 'price-high') filtered.sort(function(a, b) { return parseFloat(b.price) - parseFloat(a.price); });
+  else if (currentSort === 'name') filtered.sort(function(a, b) { return a.name.localeCompare(b.name); });
+
+  displayProducts(filtered);
+}
+
+function displayProducts(products) {
+  var grid = document.getElementById('productGrid');
+  var noP = document.getElementById('noProducts');
+  document.getElementById('productCount').textContent = products.length;
+
+  if (products.length === 0) {
+    grid.innerHTML = '';
+    noP.classList.remove('hidden');
+    return;
+  }
+  noP.classList.add('hidden');
+
+  var html = '';
+  for (var i = 0; i < products.length; i++) {
+    var p = products[i];
+    var letter = p.name.charAt(0).toUpperCase();
+
+    html += '<a href="/product.html?id=' + p.id + '" class="group product-card bg-white border border-charcoal/5 hover:border-gold/30 transition-all duration-500 block">';
+    html += '<div class="relative overflow-hidden bg-gradient-to-br from-ivory to-charcoal/5">';
+
+    if (p.image) {
+      html += '<img src="' + p.image + '" alt="' + p.name + '" class="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />';
+    } else {
+      html += '<div class="w-full h-80 lg:h-96 flex items-center justify-center"><p class="font-display text-8xl text-gold/20 group-hover:text-gold/50 transition">' + letter + '</p></div>';
+    }
+
+    html += '<div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition">';
+    html += '<button onclick="event.preventDefault(); addToWishlist(' + p.id + ')" class="bg-ivory w-10 h-10 flex items-center justify-center hover:bg-gold transition">❤️</button>';
+    html += '</div>';
+
+    if (p.sizes && p.sizes.length) {
+      html += '<div class="absolute bottom-4 left-4 bg-charcoal/90 text-ivory text-[9px] tracking-[0.3em] px-3 py-1.5">' + p.sizes.join(' · ') + '</div>';
+    }
+
+    html += '</div>';
+    html += '<div class="p-6">';
+    html += '<p class="text-[9px] text-gold tracking-[0.4em] mb-2">' + (p.category || 'NEW').toUpperCase() + '</p>';
+    html += '<h3 class="font-display text-lg font-bold mb-3">' + p.name + '</h3>';
+    html += '<p class="font-display text-xl mb-5">Rs. ' + parseFloat(p.price).toLocaleString() + '</p>';
+    html += '<button onclick="event.preventDefault(); addToCart(' + p.id + ')" class="w-full border border-charcoal/30 py-3 text-[10px] tracking-[0.4em] hover:bg-charcoal hover:text-ivory transition">ADD TO BAG</button>';
+    html += '</div>';
+    html += '</a>';
+  }
+  grid.innerHTML = html;
+}
+
+function initFilters() {
+  var catBtns = document.querySelectorAll('.filter-btn');
+  catBtns.forEach(function(btn) {
+    if (btn.getAttribute('data-category') === currentCategory) {
+      btn.classList.add('active', 'text-gold');
+    }
+    btn.addEventListener('click', function() {
+      catBtns.forEach(function(b) { b.classList.remove('active', 'text-gold'); });
+      btn.classList.add('active', 'text-gold');
+      currentCategory = btn.getAttribute('data-category');
+      applyFiltersAndSort();
+    });
+  });
+
+  var priceBtns = document.querySelectorAll('.price-filter');
+  priceBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      priceBtns.forEach(function(b) { b.classList.remove('text-gold'); });
+      btn.classList.add('text-gold');
+      currentPrice = btn.getAttribute('data-price');
+      applyFiltersAndSort();
+    });
+  });
+
+  document.getElementById('sortSelect').addEventListener('change', function(e) {
+    currentSort = e.target.value;
+    applyFiltersAndSort();
+  });
+
+  document.getElementById('shopSearchInput').addEventListener('input', function(e) {
+    currentSearch = e.target.value;
+    applyFiltersAndSort();
+  });
+
+  document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+
+  document.getElementById('mobileFilterBtn').addEventListener('click', function() {
+    document.getElementById('mobileFilters').classList.remove('hidden');
+    document.getElementById('mobileFiltersPanel').classList.remove('-translate-x-full');
+  });
+
+  document.getElementById('closeMobileFilters').addEventListener('click', closeMobileFiltersFn);
+  document.getElementById('mobileFilters').addEventListener('click', closeMobileFiltersFn);
+
+  document.querySelectorAll('.mobile-filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      currentCategory = btn.getAttribute('data-category');
+      closeMobileFiltersFn();
+      applyFiltersAndSort();
+    });
+  });
+
+  document.querySelectorAll('.mobile-price-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      currentPrice = btn.getAttribute('data-price');
+      closeMobileFiltersFn();
+      applyFiltersAndSort();
+    });
+  });
+}
+
+function closeMobileFiltersFn() {
+  document.getElementById('mobileFilters').classList.add('hidden');
+  document.getElementById('mobileFiltersPanel').classList.add('-translate-x-full');
+}
+
+function clearAllFilters() {
+  currentCategory = 'all';
+  currentPrice = 'all';
+  currentSort = 'newest';
+  currentSearch = '';
+  document.getElementById('shopSearchInput').value = '';
+  document.getElementById('sortSelect').value = 'newest';
+  document.querySelectorAll('.filter-btn').forEach(function(b) {
+    b.classList.remove('active', 'text-gold');
+    if (b.getAttribute('data-category') === 'all') b.classList.add('active', 'text-gold');
+  });
+  document.querySelectorAll('.price-filter').forEach(function(b) { b.classList.remove('text-gold'); });
+  applyFiltersAndSort();
+}
+
+var dotsBtn = document.getElementById('dotsBtn');
+var dotsMenu = document.getElementById('dotsMenu');
+dotsBtn.addEventListener('click', function(e) { e.stopPropagation(); dotsMenu.classList.toggle('open'); dotsBtn.classList.toggle('active'); });
+document.addEventListener('click', function(e) { if (!dotsMenu.contains(e.target) && !dotsBtn.contains(e.target)) { dotsMenu.classList.remove('open'); dotsBtn.classList.remove('active'); } });
+document.querySelectorAll('.dots-link').forEach(function(l) { l.addEventListener('click', function() { dotsMenu.classList.remove('open'); dotsBtn.classList.remove('active'); }); });
+
+document.getElementById('searchToggle').addEventListener('click', function() { document.getElementById('searchBar').classList.toggle('hidden'); });
+document.getElementById('mobileMenuBtn').addEventListener('click', function() { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+
+function addToWishlist(id) {
+  var i = wishlist.indexOf(id);
+  if (i > -1) { wishlist.splice(i, 1); showToast('Removed'); }
+  else { wishlist.push(id); showToast('♥ Wishlisted'); }
+  document.getElementById('wishlistCount').textContent = wishlist.length;
+}
+
+function addToCart(id) {
+  var p = allProducts.find(function(x) { return x.id === id; });
+  if (!p) return;
+  var e = cart.find(function(x) { return x.id === id; });
+  if (e) e.qty += 1; else cart.push({ id: p.id, name: p.name, price: parseFloat(p.price), qty: 1 });
+  renderCart(); openCart(); showToast('Added to bag');
+}
+
+function renderCart() {
+  var el = document.getElementById('cartItems');
+  if (cart.length === 0) {
+    el.innerHTML = '<div class="text-center py-20"><p class="text-6xl mb-6 opacity-20">🛍️</p><p class="font-serif italic text-xl text-warm-gray">Your bag is empty.</p></div>';
+  } else {
+    var h = '';
+    cart.forEach(function(i) {
+      h += '<div class="flex justify-between items-start border-b border-charcoal/10 pb-5 mb-5">';
+      h += '<div class="flex-1"><h4 class="font-display font-bold mb-1.5">' + i.name + '</h4>';
+      h += '<p class="text-gold font-display font-bold mb-4">Rs. ' + i.price.toLocaleString() + '</p>';
+      h += '<div class="flex items-center gap-3">';
+      h += '<button onclick="changeQty(' + i.id + ',-1)" class="border w-8 h-8 hover:bg-charcoal hover:text-ivory transition">−</button>';
+      h += '<span class="text-sm px-2">' + i.qty + '</span>';
+      h += '<button onclick="changeQty(' + i.id + ',1)" class="border w-8 h-8 hover:bg-charcoal hover:text-ivory transition">+</button>';
+      h += '</div></div>';
+      h += '<button onclick="removeFromCart(' + i.id + ')" class="text-red-500 text-[10px]">REMOVE</button></div>';
+    });
+    el.innerHTML = h;
+  }
+  var q = cart.reduce(function(s, i) { return s + i.qty; }, 0);
+  var t = cart.reduce(function(s, i) { return s + (i.price * i.qty); }, 0);
+  document.getElementById('cartCount').textContent = q;
+  document.getElementById('cartTotal').textContent = 'Rs. ' + t.toLocaleString();
+}
+
+function changeQty(id, d) {
+  var i = cart.find(function(x) { return x.id === id; });
+  if (!i) return;
+  i.qty += d;
+  if (i.qty <= 0) cart = cart.filter(function(x) { return x.id !== id; });
+  renderCart();
+}
+
+function removeFromCart(id) { cart = cart.filter(function(i) { return i.id !== id; }); renderCart(); }
+
+function checkout() {
+  if (cart.length === 0) { showToast('Bag empty'); return; }
+  var t = cart.reduce(function(s, i) { return s + (i.price * i.qty); }, 0);
+  var m = 'Hello Zaeem Apparel, I want to order:%0A%0A';
+  cart.forEach(function(i) { m += '• ' + i.name + ' x' + i.qty + ' = Rs. ' + (i.price * i.qty).toLocaleString() + '%0A'; });
+  m += '%0ATotal: Rs. ' + t.toLocaleString() + '%0APayment: Cash on Delivery';
+  window.open('https://wa.me/923193773788?text=' + m, '_blank');
+}
+
+function openCart() {
+  document.getElementById('cartSidebar').classList.remove('translate-x-full');
+  document.getElementById('cartOverlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCartFn() {
+  document.getElementById('cartSidebar').classList.add('translate-x-full');
+  document.getElementById('cartOverlay').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('cartBtn').addEventListener('click', openCart);
+document.getElementById('closeCart').addEventListener('click', closeCartFn);
+document.getElementById('cartOverlay').addEventListener('click', closeCartFn);
+
+function showToast(msg) {
+  var o = document.querySelector('.toast-notification');
+  if (o) o.remove();
+  var t = document.createElement('div');
+  t.className = 'toast-notification';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(function() { t.classList.add('show'); }, 10);
+  setTimeout(function() { t.classList.remove('show'); setTimeout(function() { t.remove(); }, 400); }, 2500);
+}
+</script>
+</body>
+</html>
